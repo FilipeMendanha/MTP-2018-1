@@ -33,8 +33,8 @@ void Binario_hex(int vet[], char base[]){
 	{
 		if(base[i]!='1'&&base[i]!='0')
 		{
-			printf("\nO codigo declarado não existe nessa base, escolha novamente "
-			"no menu que conversão deseja fazer");
+			printf("\nO codigo declarado n?o existe nessa base, escolha novamente "
+			"no menu que convers?o deseja fazer");
 			break;
 		}
 	}
@@ -160,15 +160,15 @@ void Oct_dec(int vet[], char base[]){
 		}
 		soma+=vet[v];
 	}
-	printf("\n O codigo digitado em Hexadecimal: %s, corresponde a esse valor: %d em decimal\n\n", base, soma);
+	printf("\n O codigo digitado em OCTAL: %s, corresponde a esse valor: %d em decimal\n\n", base, soma);
 }
 void Dec_oct(int num){
 		int c,i, result[256];
 	printf("\n O codigo digitado em decimal: %d, corresponde em octal:\t", num);
 	for(i=0;num>=1;i++)
 	{
-		result[i]=num%16;
-		num=num/16;
+		result[i]=num%8;
+		num=num/8;
 	}
 	for(c=i-1;c>=0;c--)
 	{
@@ -180,7 +180,7 @@ int main()
 {	
 	char base[256];
 	int	caso, vet[256], num;
-	printf("Para fazer as conversões devidamente, digite apenas valores pertecente a base correta de origem(ex: bin-dec; digite valor em binario para obter decimal)");
+	printf("Para fazer as convers?es devidamente, digite apenas valores pertecente a base correta de origem(ex: bin-dec; digite valor em binario para obter decimal)");
 	do{
 
 		printf("\n\n\tConversor de bases \n\n Escolha que tipo de conversao deseja fazer:\n1. Binario para Decimal"
@@ -192,26 +192,30 @@ int main()
 		{
 			case 1:
 				printf("Conversao de binario para decimal \nDigite o codigo binario:\n");
-				scanf("%s", &base);
-				getchar();
+				fflush(stdin);
+				gets(base);
+				//	scanf("%s",&base);
 				Binario_dec(vet,base);
 				break;
 			case 2:
 				printf("Conversao de binario para Hexadecimal \nDigite o codigo binario:\n");
-				scanf("%s",&base);
-				getchar();
+				fflush(stdin);
+				gets(base);
+				//	scanf("%s",&base);
 				Binario_hex(vet,base);
 				break;
 			case 3:
 				printf("Conversao de Hexadecimal para decimal \nDigite o codigo Hexadecimal:\n");
-				scanf("%s",&base);
-				getchar();
+				fflush(stdin);
+				gets(base);
+				//	scanf("%s",&base);
 				Hexa_dec(vet,base);
 				break;
 			case 4:
 				printf("Conversao de Hexadecimal para binario \nDigite o codigo Hexadecimal:\n");
-				scanf("%s",&base);
-				getchar();
+				fflush(stdin);
+				gets(base);
+				//	scanf("%s",&base);
 				Hexa_bin(vet,base);
 				break;	
 			case 5:
@@ -228,8 +232,9 @@ int main()
 				break;
 			case 7:
 				printf("Conversao de Octal para decimal \nDigite o numero octal:\n");
-				scanf("%s",&base);
-				getchar();
+				fflush(stdin);
+				gets(base);
+				//	scanf("%s",&base);
 				Oct_dec(vet,base);
 				break;
 			case 8:
