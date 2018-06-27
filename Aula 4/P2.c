@@ -192,30 +192,30 @@ int main()
 		{
 			case 1:
 				printf("Conversao de binario para decimal \nDigite o codigo binario:\n");
-				fflush(stdin);
-				gets(base);
-				//	scanf("%s",&base);
+			//	fflush(stdin);
+			//	gets(base);
+				scanf("%s",(char *)&base);
 				Binario_dec(vet,base);
 				break;
 			case 2:
 				printf("Conversao de binario para Hexadecimal \nDigite o codigo binario:\n");
-				fflush(stdin);
-				gets(base);
-				//	scanf("%s",&base);
+			//	fflush(stdin);
+			//	gets(base);
+				scanf("%s",(char *)&base);
 				Binario_hex(vet,base);
 				break;
 			case 3:
 				printf("Conversao de Hexadecimal para decimal \nDigite o codigo Hexadecimal:\n");
-				fflush(stdin);
-				gets(base);
-				//	scanf("%s",&base);
+				//fflush(stdin);
+			//	gets(base);
+				scanf("%s",(char *)&base);
 				Hexa_dec(vet,base);
 				break;
 			case 4:
 				printf("Conversao de Hexadecimal para binario \nDigite o codigo Hexadecimal:\n");
-				fflush(stdin);
-				gets(base);
-				//	scanf("%s",&base);
+				//fflush(stdin);
+				//gets(base);
+					scanf("%s",(char *)&base);
 				Hexa_bin(vet,base);
 				break;	
 			case 5:
@@ -232,9 +232,9 @@ int main()
 				break;
 			case 7:
 				printf("Conversao de Octal para decimal \nDigite o numero octal:\n");
-				fflush(stdin);
-				gets(base);
-				//	scanf("%s",&base);
+			//	fflush(stdin);
+			//	gets(base);
+				scanf("%s",(char *)&base);
 				Oct_dec(vet,base);
 				break;
 			case 8:
